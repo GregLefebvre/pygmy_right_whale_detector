@@ -1,6 +1,6 @@
-# pygrmy_right_whale_detector
+# pygmy_right_whale_detector
 
-![me](https://github.com/Daisyliu6/Daisyliu6/blob/master/me.gif)
+![me](https://github.com/GregLefebvre/pygmy_right_whale_detector/blob/main/output.gif)
 
 ## What the project does
 This project provides multiple methods to detect PRW (a species of whale) from underwater recordings. It includes:
