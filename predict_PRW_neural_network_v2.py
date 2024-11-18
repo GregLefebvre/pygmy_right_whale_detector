@@ -192,23 +192,3 @@ def neural_net_predict_on_audio(model_path, sound_folder, csv_filename, context_
         # Enregistrer les nouvelles détections dans le fichier CSV sans supprimer les anciennes
         if len(final_rectangles) > 0:
             save_detections_to_csv(final_rectangles, csv_filename)
-
-if __name__ == "__main__":
-    #POUR 1 MODELE
-    
-    sound_folder = "D:/Mousses_au_chocolat/3428/flac"
-    #files_considered = load_filenames_from_previous_detections("C:/Users/lefeb/Documents/school/Ecole Navale/VA OS/PFE/BDD_PRW_3382_ancienne_methode_recentree.csv")
-    files_considered = None
-    #model_path = "trained_nn/model_nn_v4_lambda_0p01/model_epoch_05.keras"
-    #model_path = "trained_nn/model_nn_v4_lambda_0p01_3385_et_3382PRW/model_epoch_04.keras"
-    model_path = "trained_nn/model_nn_v20_3385_3382_3441_3444_3445_0p0001/model_epoch_04.keras"
-    csv_filename = "detections_all_3428_v20.csv"
-
-    seuil_PRW = 0.7#   0.45 pour la v3
-    seuil_non_1 = 0.1
-    seuil_non_2 = 0.1
-    spectrogram_window_overlap = 0.9
-    context_size = 1
-
-    files_considered = None
-    neural_net_predict_on_audio(model_path, sound_folder, csv_filename, context_size, seuil_PRW, seuil_non_1, seuil_non_2, files_considered)
